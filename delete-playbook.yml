@@ -1,0 +1,15 @@
+---
+- hosts: all
+  name: delete a directory and a file
+  tasks:
+
+    - name: delete previously made file
+      file:
+        path: /home/bhawk/ansible/ansible-local/created-file.txt
+        state: absent
+
+    - name: Delete previously created directory
+      file:
+        path: /home/bhawk/ansible/ansible-local/created-directory
+        state: absent
+
